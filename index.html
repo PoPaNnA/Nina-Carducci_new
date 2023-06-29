@@ -4,18 +4,19 @@
 	<title>Nina Carducci | Photographe Professionnelle</title>
 	<meta name="description" content="Nina Carducci - Photographe Professionnelle" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!-- Ajoutez les balises méta pour Facebook -->
-	<meta property="og:title" content="Nina Carducci | Photographe Professionnelle">
-	<meta property="og:description" content="Nina Carducci - Photographe Professionnelle">
-	<meta property="og:image" content="URL_DE_VOTRE_IMAGE">
-	<meta property="og:url" content="URL_DE_VOTRE_SITE">
-	<!-- Ajoutez les balises méta pour Twitter -->
-	<meta name="twitter:title" content="Nina Carducci | Photographe Professionnelle">
-	<meta name="twitter:description" content="Nina Carducci - Photographe Professionnelle">
-	<meta name="twitter:image" content="URL_DE_VOTRE_IMAGE">
-
-	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+	<meta property="og:title" content="Nina Carducci, photographe professionnelle à Bordeaux">
+	<meta property="og:type" content="https://popanna.github.io/">
+	<meta property="og:image" content="./assets/images/nina.webp">
+	<meta property="og:description"
+	content="Nina Carducci, photographe professionnelle à Bordeaux vous propose de saisir des moments en photo afin de les rendre immortels.">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@Nina_Carducci">
+	<meta name="twitter:title" content="Nina Carducci, photographe professionnelle à Bordeaux">
+	<meta name="twitter:description"
+	content="Nina Carducci, photographe professionnelle à Bordeaux vous propose de saisir des moments en photo afin de les rendre immortels.">
+	<meta name="twitter:creator" content="@Nina_Carducci">
+	<meta name="twitter:image" content="./assets/images/nina.webp">
+	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="./assets/style-min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,10 +24,22 @@
 	<meta charset="UTF-8">
 	<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<!--<script src="./assets/index.js"></script>-->
 	<script src="./assets/maugallery-min.js"></script>
-	<script src="./assets/scripts.js"></script>
-	
+	<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "LocalBusiness",
+		  "name": "Nina Carducci | Photographe Professionnelle",
+		  "address": {
+			"@type": "PostalAddress",
+			"streetAddress": "68 avenue Alsace-Lorraine",
+			"addressLocality": "Bordeaux",
+			"postalCode": "33200"
+		  },
+		  "telephone": "05 56 67 78 89",
+		  "openingHours": "Mo-Fr 10:00-19:00"
+		}
+		</script>
 </head>
 <body>
 <header class="top-header">
@@ -42,8 +55,7 @@
 	</div>
 </header>
 <div id="header">
-
-	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-indicators">
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -51,7 +63,7 @@
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="./assets/images/slider/ryoji-iwata.webp" class="d-block w-100" alt="hoto Ryoji Iwata">
+				<img src="./assets/images/slider/ryoji-iwata.webp" class="d-block w-100" alt="hoto Ryoji Iwata" width="" height="">
 			</div>
 			<div class="carousel-item">
 				<img src="./assets/images/slider/nicholas-green.webp" class="d-block w-100" alt="Photo Nicholas Green">
@@ -167,6 +179,6 @@
 			<img src="./assets/images/camera.webp" alt="Photo camera" width="" height=""/>
 		</div>
 	</div>
-</div>
+	</div>
 </body>
 </html>

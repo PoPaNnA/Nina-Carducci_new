@@ -1,3 +1,18 @@
+$(document).ready(function() {
+  $('.gallery').mauGallery({
+      columns: {
+          xs: 1,
+          sm: 2,
+          md: 3,
+          lg: 3,
+          xl: 3
+      },
+      lightBox: true,
+      lightboxId: 'myAwesomeLightbox',
+      showTags: true,
+      tagsPosition: 'top'
+  });
+});
 (function($) {
   $.fn.mauGallery = function(options) {
     var options = $.extend($.fn.mauGallery.defaults, options);
@@ -115,6 +130,7 @@ $(this).fadeIn(500);
         .attr("src", element.attr("src"));
       $(`#${lightboxId}`).modal("toggle");
     },
+    /*modification des fonction pour trouve l'index des  images*/
     prevImage() {
       let activeImage = $(".lightboxImage").attr("src");
       const activeTag = $(".tags-bar span.active-tag").data("images-toggle");
@@ -133,6 +149,7 @@ $(this).fadeIn(500);
       const nextImage = imagesCollection[nextIndex];
       $(".lightboxImage").attr("src", nextImage.attr("src"));
     },
+    /*Obtenir la collection images*/
     getFilteredImages(activeTag) {
       const imagesCollection = [];
       $(".item-column").each(function() {
@@ -170,10 +187,10 @@ $(this).fadeIn(500);
     showItemTags(gallery, position, tags) {
       var tagItems =
         '<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
-      $.each(tags, function(index, value) {
-        tagItems += `<li class="nav-item active">
-                <span class="nav-link"  data-images-toggle="${value}">${value}</span></li>`;
-      });
+      /*Suppresion la class "active"*/
+        $.each(tags, function(index, value) {
+        tagItems += `<li class="nav-item"><span class="nav-link" data-images-toggle="${value}">${value}</span></li>`;
+});
       var tagsRow = `<ul class="my-4 tags-bar nav nav-pills">${tagItems}</ul>`;
 
       if (position === "bottom") {
@@ -189,11 +206,10 @@ $(this).fadeIn(500);
         return;
       }
       $(".active-tag").removeClass("active active-tag");
-      $(this).addClass("active-tag");
-
-      var tag = $(this).data("images-toggle");
-
-      $(".gallery-item").each(function() {
+      /*Ajout la class "active"*/
+      $(this).addClass("active active-tag");
+     var tag = $(this).data("images-toggle");
+    $(".gallery-item").each(function() {
         $(this)
           .parents(".item-column")
           .hide();
@@ -206,9 +222,7 @@ $(this).fadeIn(500);
             .parents(".item-column")
             .show(300);
         }
-        });
+      });
     }
-    
-    
-  };
+ };
 })(jQuery);
